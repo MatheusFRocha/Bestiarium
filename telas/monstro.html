@@ -14,16 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="width: 100% - 10px">
     <section>
         <nav>
           <a class="header-title" href=""> BESTIARIUM </a>
   
-          <div class="mobile-menu"> <!----  --->
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
+          <!-- <div class="mobile-menu"> -->
+            <!-- <div class="line1"></div> -->
+            <!-- <div class="line2"></div> -->
+            <!-- <div class="line3"></div> -->
+          <!-- </div> -->
   
           <div class="nav-list">
 
@@ -31,49 +31,69 @@
         </nav>
     </section>
 
-    <section class="body">
-        <div class="title-and-container">
-            <p class="title">NEVOLOSOS</p>
+    <section class ="body">
+        <div class = "monster-area">
+            <div class="title-and-container">
+                <p class="title">NEVOLOSOS</p>
 
-            <div class="container">
-                <!-- <img src=<?php echo $monstro['img'] ?>/> -->
-                <img src="https://i.ibb.co/g42TQm0/nevolosos.jpg" class="monster-image"/>
+                <div class="container">
+                    <!-- <img src=<?php echo $monstro['img'] ?>/> -->
+                    <img src="https://i.ibb.co/g42TQm0/nevolosos.jpg" class="monster-image"/>
 
-                <p class="monster-description">
-                    <!-- DESCRIÇÃO: <?php echo " ".$monstro['descricao'] ?> -->
+                    <p class="monster-description">
+                        <!-- DESCRIÇÃO: <?php echo " ".$monstro['descricao'] ?> -->
 
-                    <a class="monster-description-title">DESCRIÇÃO:</a> Os nevolosos, também chamados de núbilos (do polonês Mglak), são seres mágicos e perigosos que surgiram no Continente durante a Conjunção das Esferas.
-                    Tendem a ser encontrados principalmente em pântanos, florestas, ou terrenos montanhosos. Aparecem apenas quando há neblina pelas proximidades, embora alguns acreditem que a própria presença destas criaturas causa o adensamento do clima e a cerração.
-                </p>
+                        <a class="monster-description-title">DESCRIÇÃO:</a> Os nevolosos, também chamados de núbilos (do polonês Mglak), são seres mágicos e perigosos que surgiram no Continente durante a Conjunção das Esferas.
+                        Tendem a ser encontrados principalmente em pântanos, florestas, ou terrenos montanhosos. Aparecem apenas quando há neblina pelas proximidades, embora alguns acreditem que a própria presença destas criaturas causa o adensamento do clima e a cerração.
+                    </p>
+                </div>
+            </div>
+
+            <div class="title-and-container">
+                <p class="title" style="color: transparent"> </p>
+
+                <div class="container">
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        <li class="monster-description">
+                            <a class="monster-description-title">COMPORTAMENTO:</a> Ataca para matar.
+                        </li>
+                        <li class="monster-description">
+                            <a class="monster-description-title">DROP:</a> Dente de Nevoloso, Multagênico de nevoloso, Multagênico azul.
+                        </li>
+                        <li class="monster-description">
+                            <a class="monster-description-title">HABITAT:</a> Ilha da Neblina, Velen, Kaer Mohen.
+                        </li>
+                        <li class="monster-description">
+                            <a class="monster-description-title">TÁTICA DE COMBATE:</a> Fica invisível no nevoeiro e cria ilusões de outros nevolosos.
+                        </li>
+                        <li class="monster-description">
+                            <a class="monster-description-title">FRAQUEZA:</a> Pó de lua, Óleo de Necrófago, Sinal de Quen.
+                        </li>
+                        <li class="monster-description">
+                            <a class="monster-description-title">OUTROS:</a> Controlando a névoa com sua magia e enganando os sentidos das pessoas, esses monstros desorientam viajantes; fazem com que percam de vista uns aos outros, escondem trilhas e até abafam os sons de gritos.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="title-and-container">
-            <p class="title" style="color: transparent"> </p>
+        
+        <div class="comentary">
 
-            <div class="container">
-                <ul style="list-style-type: disc; margin-left: 20px;">
-                    <li class="monster-description">
-                        <a class="monster-description-title">COMPORTAMENTO:</a> Ataca para matar.
-                    </li>
-                    <li class="monster-description">
-                        <a class="monster-description-title">DROP:</a> Dente de Nevoloso, Multagênico de nevoloso, Multagênico azul.
-                    </li>
-                    <li class="monster-description">
-                        <a class="monster-description-title">HABITAT:</a> Ilha da Neblina, Velen, Kaer Mohen.
-                    </li>
-                    <li class="monster-description">
-                        <a class="monster-description-title">TÁTICA DE COMBATE:</a> Fica invisível no nevoeiro e cria ilusões de outros nevolosos.
-                    </li>
-                    <li class="monster-description">
-                        <a class="monster-description-title">FRAQUEZA:</a> Pó de lua, Óleo de Necrófago, Sinal de Quen.
-                    </li>
-                    <li class="monster-description">
-                        <a class="monster-description-title">OUTROS:</a> Controlando a névoa com sua magia e enganando os sentidos das pessoas, esses monstros desorientam viajantes; fazem com que percam de vista uns aos outros, escondem trilhas e até abafam os sons de gritos.
-                    </li>
-                </ul>
+
+            <div class="input-and-button">
+                <div class="input-comentary">
+                    <p class="input-comentary-text">NOME:</p>    
+                </div>
+
+                <div class="button-comentary">
+                    <p class="button-comentary-text">ENVIAR</p>
+                </div>
             </div>
+
+
         </div>
+
     </section>
 </body>
 </html>

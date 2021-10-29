@@ -223,7 +223,7 @@ nav {
 }
 
 .input-comentary-text {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: "Red Rose";
 }
@@ -233,16 +233,73 @@ nav {
   height: 30px;
   background-color: #C4C4C4;
   border: 5px rgba(107, 59, 59, 1);
-  border-style: solid;
+  border-style: groove;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 9px;
   
 }
 
 .button-comentary-text {
-
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Red Rose";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
+.input-comentary-text-monster {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "Red Rose";
 
+
+}
+.input-monster-comentary {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 80px;
+  border: 5px rgba(107, 59, 59, 1);
+  border-style: groove;
+
+  display: flex;
+  align-items: flex-start;
+
+
+}
+.button-inicial {
+  width: 155px;
+  height: 25px;
+  background-color: #c8ff00;
+  border: 3px rgba(107, 59, 59, 1);
+  border-style: groove;
+  display: flex;
+  margin-right: 500px;
+  margin-left: 500px;
+  margin-bottom: 100px;
+  margin-top: 350px;
+  
+
+
+}
+.button-inicial-text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Red Rose";
+
+}
+.comentary-display {
+  width: 100%;
+  height: 50%;
+
+  border: 5px rgba(107, 59, 59, 1);
+  border-style: groove;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 9px;
+}
 
 
 

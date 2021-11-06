@@ -20,24 +20,32 @@ a:hover {
 }
 
 nav {
+  position: fixed;
+  top:0px;
+
+  z-index: 2;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
-  height: 8vh;
+
+  height: 45px;
   width: 100%;
+
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-image: url('https://thumbs.dreamstime.com/b/textura-de-madeira-escura-marrom-fundo-dos-pain-velhos-tabela-retro-r-stico-superf-cie-da-cor-do-vintage-vig-vinheta-copie-o-154628058.jpg');
+  border-bottom: 10px groove rgb(26, 26, 26);
 }
 
 main {
-  background: url("bg.jpg") no-repeat center center;
+  background: url("bg.jpg") repeat center center;
   background-size: cover;
   height: 92vh;
 }
 
 .nav-list {
   list-style: none;
-  display: flex;
+  display: none;
 }
 
 .nav-list li {
@@ -51,6 +59,7 @@ main {
 }
 
 .mobile-menu div {
+  display: none;
   width: 32px;
   height: 2px;
   background: #fff;
@@ -111,10 +120,19 @@ main {
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
-.title {
+/* .title {
   font-family: "Red Rose";
   color: #FFEB3C;
   font-size: 50px;
+} */
+
+.nav-image {
+  position: relative;
+  top: 10px;
+  
+  height: 120px;
+
+  
 }
 
 .body {
@@ -135,7 +153,7 @@ main {
   text-align: center;
 
   color: rgba(107, 59, 59, 1);
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .body-title {
@@ -173,11 +191,10 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin: 5px;
 
+  margin: 5px;
   padding: 10px;
-  
-  background-color: transparent;
+  height: 200px;
 
   border: 5px rgba(107, 59, 59, 1);
   border-radius: 50px;
@@ -187,13 +204,22 @@ main {
 }
 
 .image-and-name{
+  display: flex;
   /* background-color: red; */
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-evenly;
   border-right: 5px groove rgba(107, 59, 59, 1);
+
+  height: 100%;
+  width: 20%;
+
 }
 
 .world-image-container{
-  width: 300px;
-  height: 200px;
+  /* width: 100%; */
+  height: 80%;
   /* height: 200px; */
   display: flex;
   justify-content: center;
@@ -204,43 +230,50 @@ main {
 
 .world-image {
   position: relative;
-  width: 250px;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
-  /* background-color: red; */
+  /* padding: 20px; */
+  /* background-color: green; */
 
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 1));
 }
 
 .world-name {
-  font-family: Roboto Condensed;
+  /* height: 10%; */
+
+  font-family: 'Red Rose';
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 20px;
+  /* background-color: red; */
+  /* word-break: keep-all; */
   text-align: center;
 
   color: rgba(107, 59, 59, 1);
 
-  /* border: 1px solid #000000; */
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(107, 59, 59, 1);
 }
 .world-description {
   display: flex;
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
-  margin: 20px;
 
-  font-family: Roboto Condensed;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  font-family: 'Red Rose';
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 30px;
   text-align: justify;
+  vertical-align: top;
 
   color: rgba(107, 59, 59, 1);
 }
-.world-category-list-container {
+/* .world-category-list-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -278,7 +311,7 @@ main {
   font-size: 36px;
   color: rgb(107, 59, 59, 1);
   margin-top: 95px;
-}
+} */
 
 
 
@@ -294,7 +327,7 @@ main {
 @media (max-width: 947px){
   .body{
     width: 100%;
-    height: 1500px;
+    height: auto
     /* background-color: red; */
   }
   .world-container {
@@ -310,12 +343,15 @@ main {
     font-size: 18px;
     display: none;
   }
+  .world-name{
+    white-space: nowrap;
+  }
 }
 
 @media (min-width: 947px){
   .body{
     width: 100%;
-    height: 2500px;
+    height: max-content;
     /* background-color: red; */
   }
 }

@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-a {
+/* a {
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
@@ -11,32 +11,19 @@ a {
 
 a:hover {
   opacity: 0.7;
-}
+} */
 
-.logo {
+/* .logo {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
-  height: 8vh;
-}
 
-main {
-  background: url("bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 92vh;
-}
 
 .nav-list {
   list-style: none;
-  display: flex;
+  display: none;
 }
 
 .nav-list li {
@@ -57,7 +44,7 @@ main {
   transition: 0.3s;
 }
 
-@media (max-width: 999px) {
+/* @media (max-width: 999px) {
   body {
     overflow-x: hidden;
   }
@@ -81,9 +68,9 @@ main {
   .mobile-menu {
     display: block;
   }
-}
+} */
 
-.nav-list.active {
+/* .nav-list.active {
   transform: translateX(0);
 }
 
@@ -108,13 +95,52 @@ main {
 
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
+} */
+
+
+
+
+
+
+
+/* ! ///////  CABEÇALHO DA PÁGINA /////////////////////////////////////////////////////////////*/
+
+nav {
+  position: fixed;
+  top:0px;
+
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 45px;
+  width: 100%;
+
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-image: url('https://thumbs.dreamstime.com/b/textura-de-madeira-escura-marrom-fundo-dos-pain-velhos-tabela-retro-r-stico-superf-cie-da-cor-do-vintage-vig-vinheta-copie-o-154628058.jpg');
+  border-bottom: 10px groove rgb(26, 26, 26);
 }
 
-.title {
-  font-family: "Red Rose";
-  color: #FFEB3C;
-  font-size: 50px;
+.nav-image {
+  position: relative;
+  top: 10px;
+  
+  height: 120px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ! ///////  CORPO DA PÁGINA /////////////////////////////////////////////////////////////*/
 
 .body {
   background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
@@ -123,14 +149,18 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
 }
 
 .body-welcome {
   font-family: "Red Rose";
   font-weight: 400;
   font-size: 25px;
+  text-align: center;
+
   color: rgba(107, 59, 59, 1);
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .body-title {
@@ -142,116 +172,147 @@ main {
   margin-bottom: 34px;
 }
 
-.arrow {
-  display: flex;
-  color: rgba(107, 59, 59, 1);
-  font-size: 100px;
-  font-weight: bolder;
-  /* background-color:red; */
-  height: 100px;
-  align-self: center;
-  font-family: Roboto Condensed;
-}
-
-.world-items{
-  display: flex;
-  flex-direction: row;
-  justify-content:space-evenly;
-  width: 100%;
-}
-
-.world-container{
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  align-items: center;
-  justify-content: center;
-  border: 5px rgba(107, 59, 59, 1);
-  border-radius: 50px;
-  border-style: groove;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.world-image-container{
-  width: 178px;
-  height: 178px;
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.world-image {
-  position: relative;
-  height: 178px;
-
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.world-name {
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 35px;
-  text-align: center;
-
-  color: rgba(107, 59, 59, 1);
-
-  /* border: 1px solid #000000; */
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.world-description {
-  width: 338px;
-  flex-wrap: wrap;
-  margin: 20px;
-
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-
-  color: rgba(107, 59, 59, 1);
-}
-.world-category-list-container {
+.world-category-general {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  /* background-color: red; */
+  margin-bottom: 52px;
 }
-.world-category-name {
+.world-category-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
   width:20%;
-  height: 1001%;
-}
-.world-category-list-name {
-  border: 5px groove rgba(107, 59, 59, 1);
-  width: 100%;
-  height: 611px;
-}
-.world-category-description {
-  width:70%;
   height: 100%;
-}
-.world-category-list-description {
-  border: 5px groove rgba(107, 59, 59, 1);
-  width: 100%;
-  height: 611px;
-}
-.world-category-text-name {
-  font-family: "Red Rose";
-  font-weight: 400;
-  font-size: 50px;
-  color: rgb(107, 59, 59, 1);
-  margin-top: 77px;
+  /* background-color: blue; */
 }
 
-.world-category-text-description {
+.world-category-title {
+  width: 100%;
+  /* height: 100%; */
+
+  /* background-color: green; */
+  
+  margin-top: 77px;
+
   font-family: "Red Rose";
   font-weight: 400;
-  font-size: 36px;
+  font-size: 35px;
+  text-align: center;
   color: rgb(107, 59, 59, 1);
-  margin-top: 95px;
+}
+
+.world-category-list {
+  border: 5px groove rgba(107, 59, 59, 1);
+  width: 100%;
+  height: 100%;
+}
+
+.world-category-list-item {
+  margin-left: 25px;
+
+  font-family: "Red Rose";
+  font-size: 20px;
+  /* filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 1)); */
+  text-decoration: underline;
+
+  margin-bottom: 10px;
+}
+
+.world-monsters-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width:70%;
+  height: 100%;
+  /* background-color: blue; */
+}
+
+.world-monsters-title {
+  width: 100%;
+  /* height: 100%; */
+
+  /* background-color: green; */
+  
+  margin-top: 77px;
+
+  font-family: "Red Rose";
+  font-weight: 400;
+  font-size: 35px;
+  text-align: left;
+  color: rgb(107, 59, 59, 1);
+}
+
+.world-monsters-list {
+  border: 5px groove rgba(107, 59, 59, 1);
+  width: 100%;
+  height: 100%;
+}
+
+.world-monsters-list-item {
+  margin-left: 25px;
+
+  font-family: "Red Rose";
+  font-size: 20px;
+  /* filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 1)); */
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* ! /////  RESPONSIVIDADE  ///////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 947px){
+  .body{
+    width: 100%;
+    height: auto
+    /* background-color: red; */
+  }
+  .world-container {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: fit-content;
+  }
+
+  .image-and-name {
+    border: 0px;
+    width: 100%;
+  }
+
+  .world-description {
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+  }
+  .world-name{
+    white-space: nowrap;
+  }
+  .world-image{
+    max-height: 200px;
+  }
+}
+
+@media (min-width: 947px){
+  .body{
+    width: 100%;
+    height: max-content;
+    /* background-color: red; */
+  }
+}
+
+@media (min-width: 2000px){
+  .body{
+    width: 100%;
+    height: 3000px;
+    /* background-color: black; */
+  }
 }

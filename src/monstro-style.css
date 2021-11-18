@@ -4,7 +4,7 @@
     border: 0;
 }
 
-a {
+/* a {
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
@@ -27,7 +27,7 @@ nav {
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
   height: 8vh;
-}
+} */
 
 /* main {
   background: url("") no-repeat center center;
@@ -35,7 +35,7 @@ nav {
   height: 92vh;
 } */
 
-.nav-list {
+/* .nav-list {
   list-style: none;
   display: flex;
 }
@@ -48,7 +48,7 @@ nav {
 .mobile-menu {
   display: none;
   cursor: pointer;
-}
+} */
 
 /* .mobile-menu div {
   width: 32px;
@@ -79,7 +79,7 @@ nav {
   transform: translateX(100%);
   transition: transform 0.3s ease-in;
 } */
-.nav-list li {
+/* .nav-list li {
   margin-left: 0;
   opacity: 0;
 }
@@ -120,37 +120,92 @@ nav {
   color: yellow;
   font-size: 50px;
   font-weight: 400;
+} */
+
+
+
+
+
+
+
+
+/* ! ///////  CABEÇALHO DA PÁGINA /////////////////////////////////////////////////////////////*/
+
+nav {
+  position: fixed;
+  top:0px;
+
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 45px;
+  width: 100%;
+
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-image: url('https://thumbs.dreamstime.com/b/textura-de-madeira-escura-marrom-fundo-dos-pain-velhos-tabela-retro-r-stico-superf-cie-da-cor-do-vintage-vig-vinheta-copie-o-154628058.jpg');
+  border-bottom: 10px groove rgb(26, 26, 26);
 }
 
+.nav-image {
+  position: relative;
+  top: 10px;
+  
+  height: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! ///////  CORPO DA PÁGINA /////////////////////////////////////////////////////////////*/
+
 .body {
-  background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
+  width: 100%;
+  height: calc(max-content + 75px);
+
   background-size: cover;
-  height: 100%;
-  width:100%;
-  flex: 1;
+  background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
+  /* flex: 1; */
   display: flex;
+  /* justify-content: flex-start; */
+  /* align-items: center; */
   flex-direction: column;
-  /* padding-left: 10px;
-  padding-right: 10px; */
-  justify-items: space-evenly;
 }
 
 .monster-area {
+  width: 100%;
+  /* height: max-content; */
+
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 94%;
+  justify-content: space-around;
+
+  margin-top: 100px;
 }
 
 .title-and-container {
+  width: 40%;
+  /* height: 100%; */
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 826px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 20px;
+
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  /* margin: 20px; */
+
+  /* background-color: red; */
 }
 
 .title {
@@ -170,6 +225,13 @@ nav {
   width: 100%;
   height: 100%;
   padding: 24px;
+
+  justify-content: space-between;
+}
+
+.monster-description-ul{
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
 .monster-image{
@@ -196,14 +258,27 @@ nav {
   -webkit-text-stroke-color: #000;
 }
 
-/*//////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+/* !///////// COMENTÁRIOS /////////////////////////////////////////////////////////*/
 
 .comentary{
   width:100%;
-  height: 94%;
+  height: max-content;
   /* background-color: red; */
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+
+  margin-top: 30px;
 }
 
 .input-and-button {
@@ -213,7 +288,7 @@ nav {
 
 .input-comentary {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  /* width: 100%; */
   height: 30px;
   border: 5px rgba(107, 59, 59, 1);
   border-style: groove;
@@ -234,8 +309,8 @@ nav {
   background-color: #C4C4C4;
   border: 5px rgba(107, 59, 59, 1);
   border-style: groove;
-  margin-right: 20px;
-  margin-left: 20px;
+  /* margin-right: 20px;
+  margin-left: 20px; */
   margin-bottom: 9px;
   
 }
@@ -247,7 +322,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .input-comentary-text-monster {
@@ -276,13 +350,14 @@ nav {
   border: 3px rgba(107, 59, 59, 1);
   border-style: groove;
   display: flex;
-  margin-right: 500px;
+  /* margin-right: 500px;
   margin-left: 500px;
   margin-bottom: 100px;
-  margin-top: 350px;
-  
-
-
+  margin-top: 350px; */
+  /* display: none; */
+  display: flex;
+  align-self: flex-end;
+  justify-self: baseline;
 }
 .button-inicial-text {
   color: rgb(0, 0, 0);
@@ -301,7 +376,7 @@ nav {
   margin-bottom: 9px;
 }
 .comentary-section {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   width: 100%;
   height: 270%;
   border: 5px rgba(107, 59, 59, 1);
@@ -310,12 +385,12 @@ nav {
   vertical-align: middle;
 }
 .input-comentary-text-under {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-family: "Red Rose";
 }
 .input-monster-comentary-under {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-family: "Red Rose";
 

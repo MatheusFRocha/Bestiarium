@@ -143,8 +143,13 @@ nav {
 /* ! ///////  CORPO DA PÁGINA /////////////////////////////////////////////////////////////*/
 
 .body {
+  width: 100%;
+  height: calc(max-content + 75px);
+
+  /* min-height: calc(max-content + 75px); */
+
+  background-size: cover;
   background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
-  flex: 1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -289,11 +294,6 @@ nav {
 /* ! /////  RESPONSIVIDADE  ///////////////////////////////////////////////////////////////////////////////// */
 
 @media (max-width: 947px){
-  .body{
-    width: 100%;
-    height: auto
-    /* background-color: red; */
-  }
   .world-container {
     display: flex;
     flex-direction: column;
@@ -317,21 +317,35 @@ nav {
   .world-image{
     max-height: 200px;
   }
-}
-
-@media (min-width: 947px) and (max-width: 1400px){
-  .body{
-    width: 100%;
-    height: max-content;
-    /* background-color: red; */
-    background-size: cover;
+  .world-category-general{
+    flex-direction: column;
+  }
+  .world-category-container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .world-category-title{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .world-monsters-container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .world-monsters-title{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .world-category-ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
-@media (min-width: 1400px){
+@media (min-height: 700px){
   .body{
-    width: 100%;
-    height: 2000px;
+    height: 100vh;
     background-size: cover;
   }
 }

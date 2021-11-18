@@ -300,7 +300,26 @@ nav {
   margin-left: 20px;
   margin-bottom: 9px;
 }
+.comentary-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 270%;
+  border: 5px rgba(107, 59, 59, 1);
+  border-style: groove;
+  display:inline;
+  vertical-align: middle;
+}
+.input-comentary-text-under {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "Red Rose";
+}
+.input-monster-comentary-under {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "Red Rose";
 
+}
 
 
 

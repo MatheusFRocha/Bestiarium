@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monstro</title>
-    
-    <link rel="stylesheet" href="../src/monstro-style.css"/>
+
+    <link rel="stylesheet" href="../src/monstro-style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <script language="JavaScript" src="../codigos/comentarios.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-          <img src="https://i.ibb.co/ZXwDCP9/LOGO.png" class="nav-image"/>
-  
-          <div class="mobile-menu"> <!----  --->
+            <img src="https://i.ibb.co/ZXwDCP9/LOGO.png" class="nav-image" />
+
+            <!-- <div class="mobile-menu">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-          </div>
-  
-          <div class="nav-list">
-            <!-- <li><a href='./index.html'>Mundo</a></li> -->
-            <!-- <li><a href='./index2.html'>Categorias</a></li> -->
-            <!-- <li><a href="#">Forum</a></li>
-            <li><a href="#">Contato</a></li> -->
-          </div>
-        </nav>
-      </header>
+          </div> -->
 
-    <main class ="body">
-        <div class = "monster-area">
+            <!-- <div class="nav-list">
+            <li><a href='./index.html'>Mundo</a></li>
+            <li><a href='./index2.html'>Categorias</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Contato</a></li>
+          </div> -->
+        </nav>
+    </header>
+
+    <main class="body">
+        <!-- <div> -->
+        <div class="monster-area">
             <div class="title-and-container">
                 <p class="title">NEVOLOSOS</p>
 
                 <div class="container">
                     <!-- <img src=<?php echo $monstro['img'] ?>/> -->
-                    <img src="https://i.ibb.co/g42TQm0/nevolosos.jpg" class="monster-image"/>
+                    <img src="https://i.ibb.co/g42TQm0/nevolosos.jpg" class="monster-image" />
 
                     <p class="monster-description">
                         <!-- DESCRIÇÃO: <?php echo " ".$monstro['descricao'] ?> -->
 
-                        <a class="monster-description-title">DESCRIÇÃO:</a> Os nevolosos, também chamados de núbilos (do polonês Mglak), são seres mágicos e perigosos que surgiram no Continente durante a Conjunção das Esferas.
-                        Tendem a ser encontrados principalmente em pântanos, florestas, ou terrenos montanhosos. Aparecem apenas quando há neblina pelas proximidades, embora alguns acreditem que a própria presença destas criaturas causa o adensamento do clima e a cerração.
+                        <a class="monster-description-title">DESCRIÇÃO:</a> Os nevolosos, também chamados de núbilos (do
+                        polonês Mglak), são seres mágicos e perigosos que surgiram no Continente durante a Conjunção das
+                        Esferas.
+                        Tendem a ser encontrados principalmente em pântanos, florestas, ou terrenos montanhosos.
+                        Aparecem apenas quando há neblina pelas proximidades, embora alguns acreditem que a própria
+                        presença destas criaturas causa o adensamento do clima e a cerração.
                     </p>
                 </div>
             </div>
@@ -62,19 +70,24 @@
                             <a class="monster-description-title">COMPORTAMENTO:</a> Ataca para matar.
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">DROP:</a> Dente de Nevoloso, Multagênico de nevoloso, Multagênico azul.
+                            <a class="monster-description-title">DROP:</a> Dente de Nevoloso, Multagênico de nevoloso,
+                            Multagênico azul.
                         </li>
                         <li class="monster-description">
                             <a class="monster-description-title">HABITAT:</a> Ilha da Neblina, Velen, Kaer Mohen.
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">TÁTICA DE COMBATE:</a> Fica invisível no nevoeiro e cria ilusões de outros nevolosos.
+                            <a class="monster-description-title">TÁTICA DE COMBATE:</a> Fica invisível no nevoeiro e
+                            cria ilusões de outros nevolosos.
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">FRAQUEZA:</a> Pó de lua, Óleo de Necrófago, Sinal de Quen.
+                            <a class="monster-description-title">FRAQUEZA:</a> Pó de lua, Óleo de Necrófago, Sinal de
+                            Quen.
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">OUTROS:</a> Controlando a névoa com sua magia e enganando os sentidos das pessoas, esses monstros desorientam viajantes; fazem com que percam de vista uns aos outros, escondem trilhas e até abafam os sons de gritos.
+                            <a class="monster-description-title">OUTROS:</a> Controlando a névoa com sua magia e
+                            enganando os sentidos das pessoas, esses monstros desorientam viajantes; fazem com que
+                            percam de vista uns aos outros, escondem trilhas e até abafam os sons de gritos.
                         </li>
                     </ul>
 
@@ -86,26 +99,27 @@
         </div>
 
         <div class="comentary">
-            <div class="input-and-button">
-                <div class="input-comentary">
-                    <p class="input-comentary-text">NOME:</p>    
+            <form>
+                <div class="input-and-button">
+                    <input type="text" name="Nome" placeholder="NOME:" class="input-comentary">
+                    <input type="submit" name="Enviar" value="ENVIAR" class="button-comentary">
                 </div>
+                <input type="text" id="comentary" name="Comentário" placeholder="COMENTÁRIO:" class="input-comentary">
+            </form>
 
-                <div class="button-comentary">
-                    <p class="button-comentary-text">ENVIAR</p>
-                </div>
-            </div>
-
-            <div class="input-comentary">
-                <p class="input-comentary-text">COMENTÁRIO:</p>    
-            </div>
-
-            <div class="comentary-section" style="display:none">
-                <p class="input-comentary-text-under">NOME:</p>  
-                <p class="input-monster-comentary-under">COMENTÁRIO:</p>    
+            <div class="comentary-section">
+                <script>
+                    comentarios.forEach(
+                        <html>
+                            <p class="comentary-text">NOME: <span id="comentarios.nome"></span></p>
+                            <p class="comentary-text">COMENTÁRIO: <span id="comentarios.comentario"></span></p>
+                        </html>
+                    )
+                </script>
             </div>
         </div>
 
-    </section>
+    </main>
 </body>
+
 </html>

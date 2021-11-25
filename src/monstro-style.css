@@ -176,7 +176,8 @@ nav {
 
 .body {
   width: 100%;
-  height: calc(max-content + 75px);
+  height: 100%;
+  min-height: 100vh;
 
   /* min-height: calc(max-content + 75px); */
 
@@ -230,6 +231,16 @@ nav {
   -webkit-text-stroke-color: #000;
 }
 
+/* .title {
+  font-family: "Red Rose";
+  font-weight: 400;
+  font-size: 50px;
+  
+  color: rgba(107, 59, 59, 1);
+  margin-top: 20px;
+  margin-bottom: 34px;
+} */
+
 .container {
   width: 100%;
   height: 100%;
@@ -242,7 +253,6 @@ nav {
   box-sizing: border-box;
   
   padding: 24px;
-
 
   justify-content: space-between;
 }
@@ -286,6 +296,30 @@ nav {
   justify-self: baseline;
 
   margin: -14px;
+  margin-top: 50px;
+}
+.button-inicial-text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Red Rose";
+}
+.button-inicial:hover {
+  width: 121px;
+  height: 20px;
+
+  margin-right: -5px;
+  margin-bottom: -11px;
+
+  margin-top: 52px;
+}
+
+.button-inicial:hover > .button-inicial-text{
+  width: 100%;
+
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: "Red Rose";
+  text-align: center;
 }
 
 
@@ -377,12 +411,6 @@ nav {
   display: flex;
   align-items: flex-start;
 }
-.button-inicial-text {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-family: "Red Rose";
-
-}
 .comentary-section {
   width: 100%;
   min-height: 30px;
@@ -390,6 +418,11 @@ nav {
 
   border: var(--borda-padrão);
   box-sizing: border-box;
+}
+.comentary-container{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 .comentary-text {
   color: rgb(0, 0, 0);
@@ -413,3 +446,18 @@ nav {
     background-size: cover;
   }
 } */
+
+@media (max-width: 700px){
+  .monster-area{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-and-container{
+    width: calc(100vw - 60px);
+  }
+
+  #left{
+    font-size: 10px;
+  }
+}

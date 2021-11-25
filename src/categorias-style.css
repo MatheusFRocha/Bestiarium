@@ -1,3 +1,7 @@
+:root{
+  /* --borda-padrão: 5px rgba(107, 59, 59, 1) groove; */
+  --borda-padrão: 3px black solid;
+}
 * {
   margin: 0;
   padding: 0;
@@ -144,7 +148,8 @@ nav {
 
 .body {
   width: 100%;
-  height: calc(max-content + 75px);
+  height: 100%;
+  min-height: 100vh;
 
   /* min-height: calc(max-content + 75px); */
 
@@ -158,7 +163,7 @@ nav {
   /* padding-right: 20px; */
 }
 
-.body-welcome {
+/* .body-welcome {
   font-family: "Red Rose";
   font-weight: 400;
   font-size: 25px;
@@ -175,6 +180,26 @@ nav {
   color: rgba(107, 59, 59, 1);
   margin-top: 20px;
   margin-bottom: 34px;
+} */
+
+.body-welcome {
+  margin-top: 100px;
+
+  font-family: "Red Rose";
+  font-size: 25px;
+  text-align: center;
+  color: white;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
+.body-title {
+  font-family: "Red Rose";
+  color: white;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
 }
 
 .world-category-general {
@@ -204,17 +229,21 @@ nav {
 
   /* background-color: green; */
   
-  margin-top: 77px;
+  margin-top: 25px;
 
   font-family: "Red Rose";
   font-weight: 400;
   font-size: 35px;
   text-align: center;
-  color: rgb(107, 59, 59, 1);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+
+  /* color: rgb(107, 59, 59, 1); */
 }
 
 .world-category-list {
-  border: 5px groove rgba(107, 59, 59, 1);
+  border: var(--borda-padrão);
   width: 100%;
   height: 100%;
 }
@@ -256,17 +285,21 @@ nav {
 
   /* background-color: green; */
   
-  margin-top: 77px;
+  margin-top: 25px;
 
   font-family: "Red Rose";
   font-weight: 400;
   font-size: 35px;
   text-align: left;
-  color: rgb(107, 59, 59, 1);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+
+  /* color: rgb(107, 59, 59, 1); */
 }
 
 .world-monsters-list {
-  border: 5px groove rgba(107, 59, 59, 1);
+  border: var(--borda-padrão);
   width: 100%;
   height: 100%;
 }
@@ -343,9 +376,10 @@ nav {
   }
 }
 
-@media (min-height: 700px){
+/* @media (min-height: 500px){
   .body{
     height: 100vh;
+    min-height: max-content;
     background-size: cover;
   }
-}
+} */

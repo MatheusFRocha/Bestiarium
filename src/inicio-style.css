@@ -1,3 +1,7 @@
+:root{
+  /* --borda-padrão: 5px rgba(107, 59, 59, 1) groove; */
+  --borda-padrão: 3px black solid;
+}
 * {
   margin: 0;
   padding: 0;
@@ -151,7 +155,8 @@ nav {
 
 .body {
   width: 100%;
-  height: calc(max-content + 75px);
+  height: 100%;
+  min-height: 100vh;
 
   background-size: cover;
   background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
@@ -164,7 +169,7 @@ nav {
   /* padding-right: 20px; */
 }
 
-.body-welcome {
+/* .body-welcome {
   font-family: "Red Rose";
   font-weight: 400;
   font-size: 25px;
@@ -172,9 +177,9 @@ nav {
 
   color: rgba(107, 59, 59, 1);
   margin-top: 100px;
-}
+} */
 
-.body-title {
+/* .body-title {
   font-family: "Red Rose";
   font-weight: 400;
   font-size: 50px;
@@ -182,7 +187,7 @@ nav {
   color: rgba(107, 59, 59, 1);
   margin-top: 20px;
   margin-bottom: 34px;
-}
+} */
 
 /* .arrow {
   display: flex;
@@ -195,13 +200,40 @@ nav {
   font-family: Roboto Condensed;
 } */
 
+.body-welcome {
+  margin-top: 100px;
+
+  font-family: "Red Rose";
+  font-size: 30px;
+  text-align: center;
+  color: white;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
+.body-title {
+  font-family: "Red Rose";
+  color: white;
+  font-size: 50px;
+  text-align: center;
+
+  /* background-color: red; */
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
 .world-items{
+  width: 90%;
+
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;
-  width: 90%;
+
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 75px;
 }
 
 .world-container{
@@ -214,9 +246,8 @@ nav {
   padding: 10px;
   height: 200px;
 
-  border: 5px rgba(107, 59, 59, 1);
+  border: var(--borda-padrão);
   border-radius: 50px;
-  border-style: groove;
 
   box-shadow: 0px 4px 4px rgba(182, 165, 165, 0.25);
 }
@@ -237,7 +268,7 @@ nav {
 
   align-items: center;
   justify-content: space-evenly;
-  border-right: 5px groove rgba(107, 59, 59, 1);
+  border-right: var(--borda-padrão);
 
   height: 100%;
   width: 20%;
@@ -277,10 +308,11 @@ nav {
   /* word-break: keep-all; */
   text-align: center;
 
-  color: rgba(107, 59, 59, 1);
-
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: rgba(107, 59, 59, 1);
+  color: black;
+  
+  /* color: rgba(107, 59, 59, 1); */
+  /* -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(107, 59, 59, 1); */
 }
 .world-description {
   display: flex;
@@ -298,7 +330,8 @@ nav {
   text-align: justify;
   vertical-align: top;
 
-  color: rgba(107, 59, 59, 1);
+  /* color: rgba(107, 59, 59, 1); */
+  color: black;
 }
 
 
@@ -310,11 +343,11 @@ nav {
 /* ! /////  RESPONSIVIDADE  ///////////////////////////////////////////////////////////////////////////////// */
 
 @media (max-width: 947px){
-  .body{
+  /* .body{
     width: 100%;
     height: auto;
-    /* background-color: red; */
-  }
+    background-color: red;
+  } */
   .world-container {
     display: flex;
     flex-direction: column;

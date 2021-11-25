@@ -1,3 +1,15 @@
+<?php 
+    session_start();
+
+    if(isset($_GET['id']) != 0){
+
+        $_SESSION['monstro_id'] = $_GET['id'];
+    }
+
+    require_once '../codigos/monstroCode.php';
+    require_once '../codigos/feedbackCode.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,24 +51,15 @@
     </header>
 
     <main class="body">
-        <!-- <div> -->
         <div class="monster-area">
             <div class="title-and-container">
-                <p class="title">NEVOLOSOS</p>
+                <p class="title"><?php echo $monstro['Nome'] ?></p>
 
                 <div class="container">
-                    <!-- <img src=<?php echo $monstro['img'] ?>/> -->
-                    <img src="https://i.ibb.co/g42TQm0/nevolosos.jpg" class="monster-image" />
+                    <img src="<?php echo $monstro['ImgLink'] ?>" class="monster-image" />
 
                     <p class="monster-description">
-                        <!-- DESCRIÇÃO: <?php echo " ".$monstro['descricao'] ?> -->
-
-                        <a class="monster-description-title">DESCRIÇÃO:</a> Os nevolosos, também chamados de núbilos (do
-                        polonês Mglak), são seres mágicos e perigosos que surgiram no Continente durante a Conjunção das
-                        Esferas.
-                        Tendem a ser encontrados principalmente em pântanos, florestas, ou terrenos montanhosos.
-                        Aparecem apenas quando há neblina pelas proximidades, embora alguns acreditem que a própria
-                        presença destas criaturas causa o adensamento do clima e a cerração.
+                        <a class="monster-description-title">DESCRIÇÃO:</a><?php echo " ".utf8_encode($monstro['Descricao']) ?>
                     </p>
                 </div>
             </div>
@@ -67,32 +70,27 @@
                 <div class="container">
                     <ul class="monster-description-ul">
                         <li class="monster-description">
-                            <a class="monster-description-title">COMPORTAMENTO:</a> Ataca para matar.
+                            <a class="monster-description-title">COMPORTAMENTO:</a><?php echo " ".utf8_encode($monstro['Comportamento']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">DROP:</a> Dente de Nevoloso, Multagênico de nevoloso,
-                            Multagênico azul.
+                            <a class="monster-description-title">DROP:</a><?php echo " ".utf8_encode($monstro['Drops']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">HABITAT:</a> Ilha da Neblina, Velen, Kaer Mohen.
+                            <a class="monster-description-title">HABITAT:</a><?php echo " ".utf8_encode($monstro['Habitat']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">TÁTICA DE COMBATE:</a> Fica invisível no nevoeiro e
-                            cria ilusões de outros nevolosos.
+                            <a class="monster-description-title">TÁTICA DE COMBATE:</a><?php echo " ".utf8_encode($monstro['TaticadeCombate']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">FRAQUEZA:</a> Pó de lua, Óleo de Necrófago, Sinal de
-                            Quen.
+                            <a class="monster-description-title">FRAQUEZA:</a><?php echo " ".utf8_encode($monstro['Fraqueza']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">OUTROS:</a> Controlando a névoa com sua magia e
-                            enganando os sentidos das pessoas, esses monstros desorientam viajantes; fazem com que
-                            percam de vista uns aos outros, escondem trilhas e até abafam os sons de gritos.
+                            <a class="monster-description-title">OUTROS:</a><?php echo " ".utf8_encode($monstro['Outros']) ?>
                         </li>
                     </ul>
 
                     <div class="button-inicial">
-                        <p class="button-inicial-text"><a href="inicio.html">PAGINA INICIAL</a></p>
+                        <p class="button-inicial-text"><a href="inicio.php">PAGINA INICIAL</a></p>
                     </div>
                 </div>
             </div>
@@ -108,30 +106,24 @@
             </form>
 
             <div class="comentary-section">
+                <?php
+                    if($quant != 0){
+                        foreach($feedbacks as $feedback){
+                ?>
                 <div class="comentary-container">
-                    <p class="comentary-text">NOME: Zé</p>
-                    <p class="comentary-text">COMENTÁRIO: Legal</p>
+                    <p class="comentary-text">NOME:<?php echo " ".utf8_encode($feedback['Nome']) ?></p>
+                    <p class="comentary-text">COMENTÁRIO:<?php echo " ".utf8_encode($feedback['Comentario']) ?></p>
                 </div>
+                <?php 
+                    }
+                    }else{
+                ?>
                 <div class="comentary-container">
-                    <p class="comentary-text">NOME: Luiz</p>
-                    <p class="comentary-text">COMENTÁRIO: Que bicho feio!</p>
+                    <p class="comentary-text">SEM COMENTÁRIOS POR ENQUANTO, SEJA O PRIMEIRO A COMENTAR</p>
                 </div>
-                <div class="comentary-container">
-                    <p class="comentary-text">NOME: Gustavo</p>
-                    <p class="comentary-text">COMENTÁRIO: Credo, Deus me livre de achar um desse!</p>
-                </div>
-                <div class="comentary-container">
-                    <p class="comentary-text">NOME: Zé</p>
-                    <p class="comentary-text">COMENTÁRIO: Legal</p>
-                </div>
-                <div class="comentary-container">
-                    <p class="comentary-text">NOME: Luiz</p>
-                    <p class="comentary-text">COMENTÁRIO: Que bicho feio!</p>
-                </div>
-                <div class="comentary-container">
-                    <p class="comentary-text">NOME: Gustavo</p>
-                    <p class="comentary-text">COMENTÁRIO: Credo, Deus me livre de achar um desse!</p>
-                </div>
+                <?php 
+                    }
+                ?>
             </div>
         </div>
 

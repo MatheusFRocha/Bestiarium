@@ -1,6 +1,8 @@
 <?php 
   session_start();
   require_once '../codigos/inicioCode.php';
+
+  $_SESSION['monstros'] = [];
 ?>
 
 <!DOCTYPE html>

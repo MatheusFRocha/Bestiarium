@@ -1,11 +1,17 @@
 <?php 
   session_start();
 
+  // $monstros = $_SESSION['monstros'];
+
+  // print_r($monstros);
+
   if(isset($_GET['id']) != 0){
 
     $_SESSION['mundo_id'] = $_GET['id'];
-    $mundo_nome = $_GET['name'];
+    $_SESSION['mundo_nome'] = $_GET['name'];
   }
+
+  $mundo_nome = $_SESSION['mundo_nome'];
 
    require_once '../codigos/categoriasCode.php';
 ?>
@@ -57,7 +63,9 @@
                 <?php 
                   foreach($categorias as $categoria){
                 ?>
-                <li class="world-category-list-item"><?php echo utf8_encode($categoria['Nome']) ?></li>
+                  <li class="world-category-list-item" onclick="location.replace('../codigos/cateMonstroCode.php?id=<?php echo $categoria['Id']?>&id2=<?php echo $_SESSION['mundo_id'] ?>')">
+                    <?php echo utf8_encode($categoria['Nome']) ?> (<?php echo $categoria['quant']?>)
+                  </li>
                 <?php 
                   }
                 ?>
@@ -69,6 +77,22 @@
             <p class="world-monsters-title"><?php echo utf8_encode($mundo_nome) ?></p>
             <div class="world-monsters-list">
               <ul class="world-category-ul">
+                <?php
+                  // if(count($_SESSION['monstros']) != 0){
+
+                    // array_push($_SESSION['monstros'], $_GET['Nome']);
+
+                    foreach($_SESSION['monstros'] as $monstro){
+                ?>
+                  <li class="world-monsters-list-item" onclick="
+                    location.replace('./monstro.php?id=<?php echo $monstro['Id']?>');
+                  ">
+                    <?php echo utf8_encode($monstro['Nome']) ?>
+                  </li>
+                <?php
+                    }
+                //  }
+                ?>
                 <!-- <li class="world-monsters-list-item">Abaya</li>
                 <li class="world-monsters-list-item">Afogador</li>
                 <li class="world-monsters-list-item">Afogador-Mortal</li>

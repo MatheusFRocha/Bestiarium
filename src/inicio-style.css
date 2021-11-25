@@ -218,14 +218,13 @@ nav {
   font-size: 50px;
   text-align: center;
 
-  /* background-color: red; */
-
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 }
 
 .world-items{
   width: 90%;
+  height: max-content;
 
   display: flex;
   flex-direction: column;
@@ -263,7 +262,6 @@ nav {
 
 .image-and-name{
   display: flex;
-  /* background-color: red; */
   flex-direction: column;
 
   align-items: center;
@@ -283,7 +281,6 @@ nav {
   justify-content: center;
   align-items: center;
   /* margin: 20px; */
-  /* background-color: blue; */
 }
 
 .world-image {
@@ -292,7 +289,6 @@ nav {
   height: 90%;
   object-fit: contain;
   /* padding: 20px; */
-  /* background-color: green; */
 
   filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 1));
 }

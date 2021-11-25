@@ -372,7 +372,7 @@ nav {
 }
 
 .button-comentary {
-/* * CAIXA DO BOTÃO */
+  /* * CAIXA DO BOTÃO */
 
   width: 136px;
   height: 30px;
@@ -380,7 +380,7 @@ nav {
   background-color: #C4C4C4;
   border: var(--borda-padrão);
 
-  margin-bottom: 9px;
+  /* margin-bottom: 9px; */
   margin-left: 11px;
 
   display: flex;
@@ -391,7 +391,6 @@ nav {
   font-size: 20px;
   font-family: "Red Rose";
 }
-
 .button-comentary-text {
   color: rgb(0, 0, 0);
   font-size: 20px;
@@ -400,7 +399,22 @@ nav {
   align-items: center;
   justify-content: center;
 }
+.button-comentary:hover {
+/* * CAIXA DO BOTÃO */
+  width: 112px;
+  height: 25px;
 
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-top: 2px;
+
+
+  /* * TEXTO DO COMENTÁRIO*/
+  font-size: 15px;
+}
+.button-comentary:hover > .button-comentary-text{
+
+}
 .input-monster-comentary {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -429,7 +443,6 @@ nav {
   font-size: 20px;
   font-family: "Red Rose";
 }
-
 
 
 

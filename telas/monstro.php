@@ -97,7 +97,7 @@
         </div>
 
         <div class="comentary">
-            <form>
+            <form action="" method="post">
                 <div class="input-and-button">
                     <input type="text" name="Nome" placeholder="NOME:" class="input-comentary">
                     <input type="submit" name="Enviar" value="ENVIAR" class="button-comentary">

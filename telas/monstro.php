@@ -99,10 +99,10 @@
         <div class="comentary">
             <form action="" method="post">
                 <div class="input-and-button">
-                    <input type="text" name="Nome" placeholder="NOME:" class="input-comentary">
-                    <input type="submit" name="Enviar" value="ENVIAR" class="button-comentary">
+                    <input type="text" name="nome" placeholder="NOME:" class="input-comentary">
+                    <input type="submit" value="ENVIAR" class="button-comentary">
                 </div>
-                <input type="text" id="comentary" name="Comentário" placeholder="COMENTÁRIO:" class="input-comentary">
+                <input type="text" id="comentary" name="comentario" placeholder="COMENTÁRIO:" class="input-comentary">
             </form>
 
             <div class="comentary-section">

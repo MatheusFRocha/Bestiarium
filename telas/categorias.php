@@ -1,3 +1,21 @@
+<?php 
+  session_start();
+
+  // $monstros = $_SESSION['monstros'];
+
+  // print_r($monstros);
+
+  if(isset($_GET['id']) != 0){
+
+    $_SESSION['mundo_id'] = $_GET['id'];
+    $_SESSION['mundo_nome'] = $_GET['name'];
+  }
+
+  $mundo_nome = $_SESSION['mundo_nome'];
+
+   require_once '../codigos/categoriasCode.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,31 +60,45 @@
             
             <div class="world-category-list">
               <ul class="world-category-ul">
-                <li class="world-category-list-item">CONSTRUTORES (9)</li>
-                <li class="world-category-list-item">DRACONÍDEOS (8)</li>
-                <li class="world-category-list-item">ESPECTROS (15)</li>
-                <li class="world-category-list-item">FERAS (6)</li>
-                <li class="world-category-list-item">HÍBRIDOS (9)</li>
-                <li class="world-category-list-item">INSECTÓIDES (11)</li>
-                <li class="world-category-list-item">NECRÓFAGOS (10)</li>
-                <li class="world-category-list-item">OGRÓIDES (9)</li>
-                <li class="world-category-list-item">OS AMALDIÇOADOS (7)</li>
-                <li class="world-category-list-item">RELICTOS (19)</li>
-                <li class="world-category-list-item">VAMPIROS (12)</li>
+                <?php 
+                  foreach($categorias as $categoria){
+                ?>
+                  <li class="world-category-list-item" onclick="location.replace('../codigos/cateMonstroCode.php?id=<?php echo $categoria['Id']?>&id2=<?php echo $_SESSION['mundo_id'] ?>')">
+                    <?php echo utf8_encode($categoria['Nome']) ?> (<?php echo $categoria['quant']?>)
+                  </li>
+                <?php 
+                  }
+                ?>
               </ul>
             </div>
           </div>
                
           <div class="world-monsters-container">
-            <p class="world-monsters-title">THE WITCHER 3</p>
+            <p class="world-monsters-title"><?php echo utf8_encode($mundo_nome) ?></p>
             <div class="world-monsters-list">
               <ul class="world-category-ul">
-                <li class="world-monsters-list-item">Abaya</li>
+                <?php
+                  // if(count($_SESSION['monstros']) != 0){
+
+                    // array_push($_SESSION['monstros'], $_GET['Nome']);
+
+                    foreach($_SESSION['monstros'] as $monstro){
+                ?>
+                  <li class="world-monsters-list-item" onclick="
+                    location.replace('./monstro.php?id=<?php echo $monstro['Id']?>');
+                  ">
+                    <?php echo utf8_encode($monstro['Nome']) ?>
+                  </li>
+                <?php
+                    }
+                //  }
+                ?>
+                <!-- <li class="world-monsters-list-item">Abaya</li>
                 <li class="world-monsters-list-item">Afogador</li>
                 <li class="world-monsters-list-item">Afogador-Mortal</li>
                 <li class="world-monsters-list-item">Barrosos</li>
                 <li class="world-monsters-list-item">Bruxa-Aquática</li>
-                <li class="world-monsters-list-item">Bruxa-Sepulcral</li>
+                <li class="world-monsters-list-item">Bruxa-Sepulcral</li> -->
               </ul>
             </div>
           </div>

@@ -56,7 +56,7 @@
     <main class="body">
         <div class="monster-area">
             <div class="title-and-container">
-                <p class="title"><?php echo $monstro['Nome'] ?></p>
+                <p class="title"><?php echo utf8_encode($monstro['Nome']) ?></p>
 
                 <div class="container">
                     <img src="<?php echo $monstro['ImgLink'] ?>" class="monster-image" />
@@ -100,12 +100,12 @@
         </div>
 
         <div class="comentary">
-            <form action="" method="post">
+            <form action="../codigos/feedbackPost.php" method="POST">
                 <div class="input-and-button">
                     <input type="text" name="nome" placeholder="NOME:" class="input-comentary">
                     <input type="submit" value="ENVIAR" class="button-comentary">
                 </div>
-                <input type="text" id="comentary" name="comentario" placeholder="COMENTÁRIO:" class="input-comentary">
+                <input type="text" name="comentario" placeholder="COMENTÁRIO:" class="input-comentary">
             </form>
 
             <div class="comentary-section">
@@ -114,8 +114,8 @@
                         foreach($feedbacks as $feedback){
                 ?>
                 <div class="comentary-container">
-                    <p class="comentary-text">NOME:<?php echo " ".utf8_encode($feedback['Nome']) ?></p>
-                    <p class="comentary-text">COMENTÁRIO:<?php echo " ".utf8_encode($feedback['Comentario']) ?></p>
+                    <p class="comentary-text">NOME:<?php echo " ".$feedback['Nome'] ?></p>
+                    <p class="comentary-text">COMENTÁRIO:<?php echo " ".$feedback['Comentario'] ?></p>
                 </div>
                 <?php 
                     }

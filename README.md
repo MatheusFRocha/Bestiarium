@@ -4,3 +4,4 @@
 🟡 Este é um projeto de:<br>
   * [Matheus Ferreira](https://github.com/MatheusFRocha)
   * [Pedro Henrique](https://github.com/pedrocorrea2002)
+  * [David Renan](https://github.com/Renanrj)

@@ -1,5 +1,4 @@
 :root{
-  /* --borda-padrão: 5px rgba(107, 59, 59, 1) groove; */
   --borda-padrão: 3px black solid;
 }
 
@@ -8,130 +7,6 @@
     padding: 0;
     border: 0;
 }
-
-/* a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
-  height: 8vh;
-} */
-
-/* main {
-  background: url("") no-repeat center center;
-  background-size: cover;
-  height: 92vh;
-} */
-
-/* .nav-list {
-  list-style: none;
-  display: flex;
-}
-
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-}
-
-.mobile-menu {
-  display: none;
-  cursor: pointer;
-} */
-
-/* .mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  transition: 0.3s;
-} */
-
-/* .body {
-  background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  } */
-/* .nav-list {
-  position: absolute;
-  top: 8vh;
-  right: 0;
-  width: 50vw;
-  height: 92vh;
-  background: #23232e;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in;
-} */
-/* .nav-list li {
-  margin-left: 0;
-  opacity: 0;
-}
-.mobile-menu {
-  display: block;
-}
-
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-}
-
-.header-title {
-  font-family: "Red Rose";
-  color: yellow;
-  font-size: 50px;
-  font-weight: 400;
-} */
-
-
-
-
-
-
 
 
 /* ! ///////  CABEÇALHO DA PÁGINA /////////////////////////////////////////////////////////////*/
@@ -153,23 +28,22 @@ nav {
   background-image: url('https://thumbs.dreamstime.com/b/textura-de-madeira-escura-marrom-fundo-dos-pain-velhos-tabela-retro-r-stico-superf-cie-da-cor-do-vintage-vig-vinheta-copie-o-154628058.jpg');
   border-bottom: 10px groove rgb(26, 26, 26);
 }
-
 .nav-image {
   position: relative;
   top: 10px;
   
   height: 120px;
 }
+.return-icon{
+  color: white;
+  font-size: 30px;
+  position: fixed;
 
-
-
-
-
-
-
-
-
-
+  margin-left: calc(100vw - 80px);
+}
+.return-icon:hover{
+  font-size: 25px;
+}
 
 
 /* ! ///////  CORPO DA PÁGINA /////////////////////////////////////////////////////////////*/
@@ -179,48 +53,34 @@ nav {
   height: 100%;
   min-height: 100vh;
 
-  /* min-height: calc(max-content + 75px); */
-
   background-size: cover;
   background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
+  
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
 }
 
 .monster-area {
   width: 100%;
-  /* height: max-content; */
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   margin-top: 100px;
-  /* padding-left: 20px;
-  padding-right: 20px; */
   box-sizing: border-box;
-  /* background-color: blue; */
 }
 
 .title-and-container {
   width: 50%;
   padding-left: 20px;
   padding-right: 20px;
-  /* height: 100%; */
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* padding-left: 20px;
-  padding-right: 20px; */
-  /* margin: 20px; */
-
-  /* background-color: red; */
 }
 
 .title {
@@ -230,16 +90,6 @@ nav {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 }
-
-/* .title {
-  font-family: "Red Rose";
-  font-weight: 400;
-  font-size: 50px;
-  
-  color: rgba(107, 59, 59, 1);
-  margin-top: 20px;
-  margin-bottom: 34px;
-} */
 
 .container {
   width: 100%;
@@ -265,6 +115,10 @@ nav {
 .monster-image{
   border: var(--borda-padrão);
   margin-bottom: 24px;
+  object-fit: contain;
+
+  max-width: 250px;
+  max-height: 350px;
 }
 
 .monster-description {
@@ -278,10 +132,9 @@ nav {
   color: black;
   font-size: 20px;
   line-height: 25px;
-  /* border-bottom: 1px solid black; */
   text-decoration: underline;
 
-  -webkit-text-stroke-width: 0.5px; /* largura da borda */
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #000;
 }
 .button-inicial {
@@ -323,20 +176,10 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* ! ///////// COMENTÁRIOS /////////////////////////////////////////////////////////*/
 
 .comentary{
   width: 100%;
-
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 50px;
@@ -376,12 +219,10 @@ nav {
 
   width: 136px;
   height: 30px;
+  margin-left: 11px;
 
   background-color: #C4C4C4;
   border: var(--borda-padrão);
-
-  /* margin-bottom: 9px; */
-  margin-left: 11px;
 
   display: flex;
 
@@ -396,8 +237,8 @@ nav {
   font-size: 20px;
   font-family: "Red Rose";
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
 }
 .button-comentary:hover {
 /* * CAIXA DO BOTÃO */
@@ -445,20 +286,7 @@ nav {
 }
 
 
-
-
-
-
 /* ! /////  RESPONSIVIDADE  ///////////////////////////////////////////////////////////////////////////////// */
-
-
-
-/* @media (min-height: 700px){
-  .body{
-    height: 100vh;
-    background-size: cover;
-  }
-} */
 
 @media (max-width: 700px){
   .monster-area{
@@ -472,5 +300,9 @@ nav {
 
   #left{
     font-size: 10px;
+  }
+  
+  .return-icon{
+    margin-left: calc(100vw - 50px);
   }
 }

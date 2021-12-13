@@ -1,5 +1,3 @@
-<!DOCTYPE html>  <!-- https://www.youtube.com/watch?v=bI_tIJ6HaZk ---> 
-=======
 <?php 
     session_start();
 
@@ -20,8 +18,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monstro</title>
+    <title>Bestiarium</title>
 
+    <link rel="icon" type="image/png" href="https://i.ibb.co/ZXwDCP9/LOGO.png">
     <link rel="stylesheet" href="../src/monstro-style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,20 +35,8 @@
 <body>
     <header>
         <nav>
-            <img src="https://i.ibb.co/ZXwDCP9/LOGO.png" class="nav-image" />
-
-            <!-- <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div> -->
-
-            <!-- <div class="nav-list">
-            <li><a href='./index.html'>Mundo</a></li>
-            <li><a href='./index2.html'>Categorias</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Contato</a></li>
-          </div> -->
+            <img src="https://i.ibb.co/ZXwDCP9/LOGO.png" class="nav-image"/>
+            <p class="return-icon" onclick="location.replace('./categorias.php')">↩</p>
         </nav>
     </header>
 
@@ -62,7 +49,7 @@
                     <img src="<?php echo $monstro['ImgLink'] ?>" class="monster-image" />
 
                     <p class="monster-description">
-                        <a class="monster-description-title">DESCRIÇÃO:</a><?php echo " ".utf8_encode($monstro['Descricao']) ?>
+                        <a class="monster-description-title">DESCRIÇÃO:</a><?php echo utf8_encode(" ".$monstro['Descricao']) ?>
                     </p>
                 </div>
             </div>
@@ -73,28 +60,24 @@
                 <div class="container">
                     <ul class="monster-description-ul">
                         <li class="monster-description">
-                            <a class="monster-description-title">COMPORTAMENTO:</a><?php echo " ".utf8_encode($monstro['Comportamento']) ?>
+                            <a class="monster-description-title">COMPORTAMENTO:</a><?php echo utf8_encode(" ".$monstro['Comportamento']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">DROP:</a><?php echo " ".utf8_encode($monstro['Drops']) ?>
+                            <a class="monster-description-title">DROP:</a><?php echo utf8_encode(" ".$monstro['Drops']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">HABITAT:</a><?php echo " ".utf8_encode($monstro['Habitat']) ?>
+                            <a class="monster-description-title">HABITAT:</a><?php echo utf8_encode(" ".$monstro['Habitat']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">TÁTICA DE COMBATE:</a><?php echo " ".utf8_encode($monstro['TaticadeCombate']) ?>
+                            <a class="monster-description-title">TÁTICA DE COMBATE:</a><?php echo utf8_encode(" ".$monstro['TaticadeCombate']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">FRAQUEZA:</a><?php echo " ".utf8_encode($monstro['Fraqueza']) ?>
+                            <a class="monster-description-title">FRAQUEZA:</a><?php echo utf8_encode(" ".$monstro['Fraqueza']) ?>
                         </li>
                         <li class="monster-description">
-                            <a class="monster-description-title">OUTROS:</a><?php echo " ".utf8_encode($monstro['Outros']) ?>
+                            <a class="monster-description-title">OUTROS:</a><?php echo utf8_encode(" ".$monstro['Outros']) ?>
                         </li>
                     </ul>
-
-                    <div class="button-inicial">
-                        <p class="button-inicial-text"><a href="inicio.php">PAGINA INICIAL</a></p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -114,8 +97,8 @@
                         foreach($feedbacks as $feedback){
                 ?>
                 <div class="comentary-container">
-                    <p class="comentary-text">NOME:<?php echo " ".$feedback['Nome'] ?></p>
-                    <p class="comentary-text">COMENTÁRIO:<?php echo " ".$feedback['Comentario'] ?></p>
+                    <p class="comentary-text">NOME:<?php echo utf8_encode(" ".$feedback['Nome']) ?></p>
+                    <p class="comentary-text">COMENTÁRIO:<?php echo utf8_encode(" ".$feedback['Comentario']) ?></p>
                 </div>
                 <?php 
                     }

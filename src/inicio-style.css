@@ -1,116 +1,10 @@
 :root{
-  /* --borda-padrão: 5px rgba(107, 59, 59, 1) groove; */
   --borda-padrão: 3px black solid;
 }
 * {
   margin: 0;
   padding: 0;
 }
-
-/* a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-main {
-  background: url("bg.jpg") repeat center center;
-  background-size: cover;
-  height: 92vh;
-}
-
-.nav-list {
-  list-style: none;
-  display: none;
-}
-
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-}
-
-.mobile-menu {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu div {
-  display: none;
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  transition: 0.3s;
-}
-
-/* @media (max-width: 999px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-list {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #23232e;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-  .mobile-menu {
-    display: block;
-  }
-} */
-
-/* .nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-} */
-
-
-
-
-
-
 
 
 /* ! ///////  CABEÇALHO DA PÁGINA /////////////////////////////////////////////////////////////*/
@@ -141,16 +35,6 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* ! ///////  CORPO DA PÁGINA /////////////////////////////////////////////////////////////*/
 
 .body {
@@ -160,45 +44,11 @@ nav {
 
   background-size: cover;
   background-image: url("http://1.bp.blogspot.com/-nv1J7PXd0eY/U4NXMiBOFKI/AAAAAAAAO94/oe2WJwHpomM/s1600/Kraft_Dirty_Paper_Texture.jpg");
-  /* flex: 1; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
 }
-
-/* .body-welcome {
-  font-family: "Red Rose";
-  font-weight: 400;
-  font-size: 25px;
-  text-align: center;
-
-  color: rgba(107, 59, 59, 1);
-  margin-top: 100px;
-} */
-
-/* .body-title {
-  font-family: "Red Rose";
-  font-weight: 400;
-  font-size: 50px;
-  
-  color: rgba(107, 59, 59, 1);
-  margin-top: 20px;
-  margin-bottom: 34px;
-} */
-
-/* .arrow {
-  display: flex;
-  color: rgba(107, 59, 59, 1);
-  font-size: 100px;
-  font-weight: bolder;
-  background-color:red;
-  height: 100px;
-  align-self: center;
-  font-family: Roboto Condensed;
-} */
 
 .body-welcome {
   margin-top: 100px;
@@ -276,11 +126,9 @@ nav {
 .world-image-container{
   width: 100%;
   height: 80%;
-  /* height: 200px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 20px; */
 }
 
 .world-image {
@@ -294,29 +142,23 @@ nav {
 }
 
 .world-name {
-  /* height: 10%; */
-
   font-family: 'Red Rose';
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  /* background-color: red; */
-  /* word-break: keep-all; */
   text-align: center;
 
   color: black;
-  
-  /* color: rgba(107, 59, 59, 1); */
-  /* -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: rgba(107, 59, 59, 1); */
 }
 .world-description {
-  display: flex;
   width: 80%;
+  display: flex;
   flex-wrap: wrap;
 
   margin-right: 20px;
   margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-family: 'Red Rose';
   font-style: normal;
@@ -325,30 +167,20 @@ nav {
   line-height: 30px;
   text-align: justify;
   vertical-align: top;
-
-  /* color: rgba(107, 59, 59, 1); */
   color: black;
 }
 
 
-
-
-
-
-
 /* ! /////  RESPONSIVIDADE  ///////////////////////////////////////////////////////////////////////////////// */
 
-@media (max-width: 947px){
-  /* .body{
-    width: 100%;
-    height: auto;
-    background-color: red;
-  } */
+@media (max-width: 1050px){
   .world-container {
     display: flex;
     flex-direction: column;
     height: max-content;
     width: fit-content;
+
+    max-height: none;
   }
 
   .image-and-name {
@@ -366,12 +198,5 @@ nav {
   }
   .world-image{
     max-height: 200px;
-  }
-}
-
-@media (min-height: 1000px){
-  .body{
-    height: 100vh;
-    background-size: cover;
   }
 }

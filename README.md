@@ -4,6 +4,6 @@
 🟡 Este é um projeto de:<br>
   * [David Renan](https://github.com/Renanrj)
   * [Gabriel Maia](https://github.com/DeveloperMaia/DeveloperMaia)
-  * [Gisele Cidral](https://github.com/DeveloperMaia/DeveloperMaia)
+  * [Gisele Cidral](https://github.com/Gisele7)
   * [Matheus Ferreira](https://github.com/MatheusFRocha)
   * [Pedro Henrique](https://github.com/pedrocorrea2002) 
